@@ -15,3 +15,11 @@ def convert_temperature():
     except ValueError:
         result_label.config(text="Please enter a valid temperature.")
 
+# Create the main window
+app = tk.Tk()# Crea
+app.title("Temperature Converter")
+
+# Temperature Entry
+Label(app, text="Enter Temperature:").grid(row=0, column=0, padx=5, pady=5)
+entry = Entry(app)
+entry.grid(row=0, column=1, padx=5, pady=5)
