@@ -23,3 +23,9 @@ app.title("Temperature Converter")
 Label(app, text="Enter Temperature:").grid(row=0, column=0, padx=5, pady=5)
 entry = Entry(app)
 entry.grid(row=0, column=1, padx=5, pady=5)
+
+# Unit Selection
+unit_var = tk.StringVar()
+unit_var.set("Celsius")
+celsius_radio = tk.a(app, text="Celsius", variable=unit_var, value="Celsius")
+fahrenheit_radio = tk.Radiobutton(app, text="Fahrenheit", variable=unit_var,
