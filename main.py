@@ -16,7 +16,7 @@ def convert_temperature():
         result_label.config(text="Please enter a valid temperature.")
 
 # Create the main window
-app = tk.Tk()# Crea
+app = tk.Tk()
 app.title("Temperature Converter")
 
 # Temperature Entry
@@ -28,7 +28,9 @@ entry.grid(row=0, column=1, padx=5, pady=5)
 unit_var = tk.StringVar()
 unit_var.set("Celsius")
 celsius_radio = tk.Radiobutton(app, text="Celsius", variable=unit_var, value="Celsius")
-fahrenheit_radio = tk.Radiobutton(app, text="Fahrenheit", variable=unit_var)
+fahrenheit_radio = tk.Radiobutton(app, text="Fahrenheit", variable=unit_var, value="Fahrenheit")
+celsius_radio.grid(row=1, column=0, padx=5, pady=5)
+fahrenheit_radio.grid(row=1, column=1, padx=5, pady=5)
 
 # # Convert Button
 convert_button = Button(app, text="Convert", command=convert_temperature)
@@ -36,7 +38,7 @@ convert_button.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
 
 # Result Label
 result_label = Label(app, text="")
-result_label.grid(row=3, column=0,columnspan=2, padx=5, pady=5)
+result_label.grid(row=3, column=0,  columnspan=2, padx=5, pady=5)
 
 # Start the Tkinter event loop
 app.mainloop()
